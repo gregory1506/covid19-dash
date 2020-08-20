@@ -316,7 +316,7 @@ def make_covid_map(country=None,date=None,cases=None):
                                         lon=df_tmp.Long,
                                         mode="markers",
                                         marker=go.scattermapbox.Marker(
-                                                size=df_tmp[case] ** (1/3),
+                                                size=df_tmp[case] ** (1/4),
                                                 color=COLORS[case],
                                                 opacity=0.7
                                         ),
