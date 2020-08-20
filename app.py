@@ -1,4 +1,5 @@
 #basic imports
+import math
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -316,7 +317,7 @@ def make_covid_map(country=None,date=None,cases=None):
                                         lon=df_tmp.Long,
                                         mode="markers",
                                         marker=go.scattermapbox.Marker(
-                                                size=df_tmp[case] ** (1/4),
+                                                size=math.log10(df_tmp[case]),
                                                 color=COLORS[case],
                                                 opacity=0.7
                                         ),
